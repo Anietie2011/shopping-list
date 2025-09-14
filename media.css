@@ -1,0 +1,55 @@
+@media (max-width: 600px) {
+  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .in{
+    display: block;
+    width: 100%;
+    height: fit-content;
+  }
+  #buy{
+    width: 50%;
+    display: inline;
+    margin-left: 70px;
+  }
+  .amm{
+    display: inline;
+  }
+  li{
+    width: 105%;
+    margin-left: 30px;
+  }
+  select, #ammount{
+    height: fit-content;
+    padding: 5px;
+  }
+  .add{
+    width: 70%;
+    height: 40px;
+    margin: 10px 65px;
+  }
+  .total{
+    margin: 0;
+    width: 110%;
+  }
+}
+@media (max-width: 400px) {
+  #buy{
+    width: 40%;
+  }
+  .add{
+    height: 30px;
+  }
+}
+@media (max-width: 350px){
+  .in{
+    width: 100%;
+  }
+  #buy{
+    width: 50%;
+    margin-left: 0;
+  }
+}

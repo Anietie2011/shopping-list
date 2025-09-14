@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+  --body-color: #ffffff;
+  --brand-color: rgba(70, 37, 255, 0.589);
+  --text-color: black;
+  --sturborn-color: hsl(from var(--body-color) h s calc(l - 4));
+  --check-color: hsl(from var(--text-color) h s calc(l + 70));
+}
+
+.dark {
+  --body-color: #111111;
+  --brand-color: #c392ffb3;
+  --text-color: #ffffff;
+  --sturborn-color: hsl(from var(--body-color) h s calc(l + 4));
+  --check-color: hsl(from var(--text-color) h s calc(l - 70));
+}
+body{
+  background: var(--body-color);
+  width: 100%;
+  height: 100dvh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+h1{
+  color: var(--brand-color);
+  cursor: pointer;
+  user-select: none;
+}
+.in{
+  background: none;
+  display: flex;
+  border-radius: 20px;
+  margin-top: 20px;
+  height: 40px;
+}
+input,
+select{
+  outline: none;
+  border-radius: 20px;
+  background: none;
+}
+#buy{
+  color: var(--text-color);
+  width: 70%;
+  padding: 5px 10px;
+  caret-color: var(--brand-color);
+  color: var(--text-color);
+  border: 2px solid var(--brand-color);
+}
+.to{
+  color: hsl(from var(--brand-color) h calc(s * 3) l);
+  font-size:12px;
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.tell{
+  position: absolute;
+  top: -10px;
+  font-size: 8px;
+  color: var(--brand-color);
+}
+.tells{
+  top: -8px;
+
+}
+#ammount{
+  /* position: relative; */
+  font-size: 11px;
+  width:50px;
+  padding: 3px;
+  caret-color: var(--brand-color);
+  height: 100%;
+  color: var(--text-color);
+  border: 1.5px solid var(--brand-color);
+}
+/* #ammount:pic{
+  display: none;
+} */
+
+select{
+  height: 100%;
+  cursor: pointer;
+  margin: 0 3px 0 -3px ;
+  color: var(--text-color);
+  border: 1px solid var(--brand-color);
+}
+option{
+  color: var(--text-color);
+  background: var(--body-color);
+  /* outline: none;
+  border: none;
+  cursor: pointer; */
+}
+/* option:hover{
+  color: var(--brand-color);
+} */
+.amm{
+  display: inline;
+  width: 130px;
+  background: none;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.add{
+  /* display: ; */
+  border-radius: 20px;
+  width: 40%;
+  border: none;
+  background: var(--brand-color);
+  cursor: pointer;
+  color: var(--body-color);
+}
+.add:hover{
+  background: hsl(from var(--brand-color) h s calc(l - 10));
+}
+span{
+  color: var(--text-color);
+}
+ul{
+  margin-top: 10px;
+}
+li{
+  width: 450px;
+  background: var(--sturborn-color);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.el{
+  width: 40px;
+}
+.s{
+  margin-left: 20px;
+}
+.ss{
+  border: 1px solid var(--brand-color);
+  border-radius: 1000px;
+  flex-shrink: 0;
+  padding: 2px 7px;
+  margin: 0 5px;
+  color: transparent;
+  transition: color .25s;
+  cursor: pointer;
+  user-select: none;
+}
+.main{
+  flex-grow: 1;
+  color: var(--text-color);
+  transition: .25s;
+  cursor: pointer;
+}
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"]:checked ~ .ss {
+  color: var(--text-color);
+  background: var(--brand-color);
+}
+input[type="checkbox"]:checked ~ .main , input[type="checkbox"]:checked ~ .price{
+  text-decoration: line-through;
+  color: var(--check-color);
+  user-select: none;
+}
+.price{
+  color: var(--brand-color);
+  font-size: 13px;
+  margin-right: 40px;
+}
+.del{
+  cursor: pointer;
+  padding: 5px 10px;
+  display: grid;
+  fill: rgb(128, 128, 128);
+  background: none;
+  border: none;
+  place-content: center;
+  border-radius: 1000px;
+}
+.bra{
+  color: var(--brand-color);
+}
+.del:hover{
+  fill: rgba(255, 0, 0, 0.252);
+}
+.tot{
+  color: var(--brand-color);
+  position: relative;
+  display: flex;
+  justify-content: start;
+}
+.total{
+  color: var(--text-color);
+  width: fit-content;
+  background: var(--sturborn-color);
+  padding: 10px;
+  border-radius: 20px;
+  list-style: none;
+  display: /*flex*/none;
+  align-items: center;
+  margin: 30px 0 0 150px;
+}
+.name{
+  flex-grow: 1;
+}
+/* .del:hover{
+  background: #ff003335;
+} */

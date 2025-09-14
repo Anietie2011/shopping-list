@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="shop.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <title>Shopping List</title>
+</head>
+<body>
+  <h1 onclick="toogleTheme();" title="change theme">Shopping List</h1>
+  <span id="symbol" style="color: white;"></span>
+  <div class="in">
+    <input type="text" id="buy" onkeydown="moveToAmmount()" placeholder="name of product" autocomplete="off">
+    <div class="amm">
+      <select id="currency">
+        <option value="₦">₦</option>
+        <!-- s -->
+      </select>
+      <input type="number" id="ammount" min="1" onkeydown="addEnter()" autocomplete="off">
+    </div>
+    <button class="add" title="add to list">ADD TO LIST</button>
+  </div>
+  <section>
+    <ul id="me">
+      
+    </ul>
+    <div class="total">
+       
+    </div>
+  </section>
+  <script type="module" src="currency.js"></script>
+  <script  src="app.js"></script>
+  
+</body>
+</html>
